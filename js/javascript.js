@@ -248,9 +248,32 @@ var loop = function () {
 		});
 
 		if (charmander.health <= 0) {
-			$("#chat-text").text("You lose!");
+			$("#chat-text").text("Charmander has fainted! You lose!");
+
+			$("#user-buttons").addClass("hide");
+
+			$("#charmander-img").animate({
+				top: "-=25",
+
+			}, 200, function() {
+				$("#charmander-img").animate({
+					top: "+=300",
+				}, 200)
+			});
+
 		} else {
-			$("#chat-text").text("You win!");
+			$("#chat-text").text("Pikachu has fainted! You win!");
+
+			$("#user-buttons").addClass("hide");
+
+			$("#pikachu-img").animate({
+				top: "-=25",
+
+			}, 200, function() {
+				$("#pikachu-img").animate({
+					top: "+=500",
+				}, 200)
+			});
 		}
 
 		console.log("Game Over");
@@ -267,6 +290,8 @@ var reset = function () {
 	pikachu.effect = null;
 	$("#cpu-health-bar").css("width", 100 + "%");
 	$("#user-health-bar").css("width", 100 + "%");
+	$("#pikachu-img").css("top", 40 + "px");
+	$("#charmander-img").css("top", 121 + "px");
 	$("#game-over").addClass("hide");
 	init();
 };

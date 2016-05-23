@@ -105,24 +105,28 @@
         width: 100px;
         top: 95px;
         right: 57px;
-        z-index: 1;
+        z-index: 3;
     }
 
     .cpu-attack-img {
         width: 100px;
         top: 185px;
         left: 60px;
-        z-index: 1;
+        z-index: 3;
     }
 
     .img-spacing {
         float: left;
     }
-	
+
 	/*---- Theme Classes ----*/
 	
 	.absolute {
         position: absolute !important;
+    }
+
+    .full-width {
+        width: 100%;
     }
 	
 	.bullseye {

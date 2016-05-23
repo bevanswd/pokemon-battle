@@ -13,18 +13,20 @@
 	<body>
 		<div id="main-container" class="bullseye box-shadow-1 border-radius">
 			<div id="top-screen">
-				<img id="charmander-img" src="img/charmander.png" class="absolute" style="height: 115px; top: 121px; left:40px;" />
+				<img id="charmander-img" src="img/charmander.png" class="absolute" style="z-index:-1;height: 115px; top: 121px; left:40px;" />
+				<div class="user-stats">
 					<div id="user-name" class="absolute"></div>
 					<div id="user-lvl" class="absolute"></div>
 					<div class="absolute" style="width: 71px; top:216px; left: 277px;">
 						<div id="user-health-bar" class="absolute"></div>
 					</div>
-				<img src="img/your_info.png" class="absolute" style="height: 45px; top: 187px; right:10px;" />
+					<img src="img/your_info.png" class="absolute" style="height: 45px; top: 187px; right:10px;" />
+				</div>
 
 				<img id="attack-img" src="img/attack.png" class="absolute hide" />
 
 
-				<img id="pikachu-img" src="img/pikachu.png" class="absolute" style="height: 115px; top: 40px; right:46px;" />
+				<img id="pikachu-img" src="img/pikachu.png" class="absolute" style="z-index:-1;height: 115px; top: 40px; right:46px;" />
 					<div id="cpu-name" class="absolute"></div>
 					<div id="cpu-lvl" class="absolute"></div>
 					<div class="absolute" style="width: 71px; top: 39px; left: 72px;">
@@ -34,11 +36,11 @@
 
 					<div id="chat-text" class="absolute text-subhead"></div>
 
-				<img src="img/grass.png" class="img-spacing" style="width:400px;" />
-				<img src="img/chat_window.png" class="img-spacing" style="width:400px;" />
+				<img src="img/grass.png" class="img-spacing absolute" style="z-index:-2;width:400px;" />
+				<img src="img/chat_window.png" class="img-spacing absolute" style="z-index:-1;width:400px;top:236px;" />
 			</div>
 
-			<div id="bottom-screen">
+			<div id="bottom-screen" style="z-index:2">
 				<div id="user-buttons" class="hide">
 					<div id="move1-button" class="pointer" value="0">
 						<div id="move1-text" class="absolute text-18 text-center"></div>
@@ -58,10 +60,10 @@
 					</div>
 				</div>
 
-				<div id="game-over" class="absolute text-30 text-center hide">
+				<div id="game-over" class="absolute text-30 text-center hide full-width">
 				GAME OVER
 
-				<div id="reset" class="pointer" style="font-size:.9em;background-color: rgba(255, 255, 255, 0.5);border-radius:6px; border: 4px solid black; color:black;width:100px;height:30px;position:absolute; text-align:center;line-height:30px;">
+				<div id="reset" class="pointer" style="font-size:.9em;background-color: rgba(255, 255, 255, 0.5);border-radius:6px; border: 4px solid black; color:black;width:100px;height:30px; margin:0 auto; text-align:center;line-height:30px;">
 				RESET?
 				</div>
 
